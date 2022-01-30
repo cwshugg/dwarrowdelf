@@ -125,7 +125,12 @@ call   SetC('Special',          s:c_acc8,           'NONE',         'NONE',     
 
 " Comments
 call   SetC('Comment',          s:c_ltgray1,        'NONE',         'NONE',     s:c_ltgray1_cterm,  'NONE',             'NONE')
-call   SetC('SpecialComment',   s:c_acc1,           'NONE',         'bold',     s:c_acc1_cterm,     'NONE',             'NONE')
+call   SetC('SpecialComment',   s:c_acc1,           'NONE',         'bold',     s:c_acc1_cterm,     'NONE',             'bold')
+
+" Special keywords
+call   SetC('Todo',             s:c_acc8,           s:c_gray2,      'bold',     s:c_acc8_cterm,     s:c_gray2_cterm,    'bold')
+call   SetC('Todo2',             s:c_acc8,           s:c_gray2,      'bold',     s:c_acc8_cterm,     s:c_gray2_cterm,    'bold')
+match Todo2 /\<todo\>\c/
 
 " Vim Status Line
 call   SetC('StatusLine',       s:c_acc2,           'NONE',         'NONE',     s:c_acc2_cterm,     'NONE',             'NONE')
