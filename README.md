@@ -1,4 +1,4 @@
-![](https://shugg.dev/images/dwarrowdelf/logo.png)
+![](https://shugg.dev/images/dwarrowdelf/logo1.png)
 
 After dipping my toes into the world of Vim scripting and theming, I decided to create my own. Dwarrowdelf is the result. Thanks to Alexander Gude's [Eldar](https://github.com/agude/vim-eldar) theme, pR0Ps' [Molokai Dark](https://github.com/pR0Ps/molokai-dark) theme, and the default [Elflord](https://github.com/vim/vim/blob/master/runtime/colors/elflord.vim) theme for inspiration.
 
