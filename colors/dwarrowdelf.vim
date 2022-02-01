@@ -82,66 +82,71 @@ let s:c_acc7 = '#3D81FE'        " BLUE: the shimmering waters of Mirrormere
 let s:c_acc7_cterm = '39'
 let s:c_acc8 = '#D70000'        " RED: the dark fires of Durin's Bane
 let s:c_acc8_cterm = '160'
+" Formatting strings
+let s:f_b = 'bold'              " bold formatting
+let s:f_u = 'underline'         " underline formatting
+let s:f_bu = 'bold,underline'   " bold AND underline formatting
+" Other strings
+let s:f_none = 'NONE'           " when NO formatting is applied
 
 " ---------------------------- COLOR ASSIGNMENT ----------------------------- "
 "           GROUP NAME          GUIFG               GUIBG           GUI         CTERMFG             CTERMBG             CTERM       TERM
-call   SetC('Normal',           s:c_white,          'NONE',         'NONE',     s:c_white_cterm)
+call   SetC('Normal',           s:c_white,          s:f_none,       s:f_none,   s:c_white_cterm,    s:f_none,           s:f_none,   s:f_none)
 
 " Cursor line/column and line number settings
-call   SetC('CursorLine',       'NONE',             s:c_gray1,      '',         '',                 s:c_gray1_cterm,    'NONE')
-call   SetC('CursorColumn',     'NONE',             s:c_gray1,      'NONE',     '',                 s:c_gray1_cterm)
-call   SetC('LineNr',           s:c_ltgray2,        'NONE',         'NONE',     s:c_ltgray2_cterm,  'NONE')
-call   SetC('CursorLineNr',     s:c_acc3,           s:c_gray1,      'bold',     s:c_acc3_cterm,     s:c_gray1_cterm)
-
+call   SetC('CursorLine',       s:f_none,           s:c_gray1,      s:f_none,   s:f_none,           s:c_gray1_cterm,    s:f_none,   s:f_none)
+call   SetC('CursorColumn',     s:f_none,           s:c_gray1,      s:f_none,   s:f_none,           s:c_gray1_cterm,    s:f_none,   s:f_none)
+call   SetC('LineNr',           s:c_ltgray2,        s:f_none,       s:f_none,   s:c_ltgray2_cterm,  s:f_none,           s:f_none,   s:f_none)
+call   SetC('CursorLineNr',     s:c_acc3,           s:c_gray1,      s:f_b,      s:c_acc3_cterm,     s:c_gray1_cterm,    s:f_b,      s:f_b) 
 " Constants
-call   SetC('Constant',         s:c_acc5,           'NONE',         'NONE',     s:c_acc5_cterm,     'NONE',             'NONE')
-call   SetC('String',           s:c_acc3,           'NONE',         'NONE',     s:c_acc3_cterm,     'NONE',             'NONE')
-call   SetC('Character',        s:c_acc3,           'NONE',         'NONE',     s:c_acc3_cterm,     'NONE',             'NONE')
-call   SetC('Number',           s:c_acc8,           'NONE',         'NONE',     s:c_acc8_cterm,     'NONE',             'NONE')
-call   SetC('Float',            s:c_acc8,           'NONE',         'NONE',     s:c_acc8_cterm,     'NONE',             'NONE')
+call   SetC('Constant',         s:c_acc5,           s:f_none,       s:f_none,   s:c_acc5_cterm,     s:f_none,           s:f_none,   s:f_none)
+call   SetC('String',           s:c_acc3,           s:f_none,       s:f_none,   s:c_acc3_cterm,     s:f_none,           s:f_none,   s:f_none)
+call   SetC('Character',        s:c_acc3,           s:f_none,       s:f_none,   s:c_acc3_cterm,     s:f_none,           s:f_none,   s:f_none)
+call   SetC('Number',           s:c_acc8,           s:f_none,       s:f_none,   s:c_acc8_cterm,     s:f_none,           s:f_none,   s:f_none)
+call   SetC('Float',            s:c_acc8,           s:f_none,       s:f_none,   s:c_acc8_cterm,     s:f_none,           s:f_none,   s:f_none)
 
 " Identifiers and Functions
-call   SetC('Identifier',       s:c_acc2,           'NONE',         'bold',     s:c_acc2_cterm,     'NONE',             'bold')
-call   SetC('Function',         s:c_acc4,           'NONE',         'bold',     s:c_acc4_cterm,     'NONE',             'bold')
+call   SetC('Identifier',       s:c_acc2,           s:f_none,       s:f_b,      s:c_acc2_cterm,     s:f_none,           s:f_b,      s:f_b)
+call   SetC('Function',         s:c_acc4,           s:f_none,       s:f_b,      s:c_acc4_cterm,     s:f_none,           s:f_b,      s:f_b)
 
 " Statements
-call   SetC('Statement',        s:c_acc1,           'NONE',         'NONE',     s:c_acc1_cterm,     'NONE',             'NONE')
+call   SetC('Statement',        s:c_acc1,           s:f_none,       s:f_none,   s:c_acc1_cterm,     s:f_none,           s:f_none,   s:f_none)
 
 " Preprocessor
-call   SetC('PreProc',          s:c_acc6,           'NONE',         'NONE',     s:c_acc6_cterm,     'NONE',             'NONE')
-call   SetC('Include',          s:c_acc2,           'NONE',         'NONE',     s:c_acc2_cterm,     'NONE',             'NONE')
-call   SetC('Define',           s:c_acc2,           'NONE',         'NONE',     s:c_acc2_cterm,     'NONE',             'NONE')
-call   SetC('Macro',            s:c_acc2,           'NONE',         'NONE',     s:c_acc2_cterm,     'NONE',             'NONE')
-call   SetC('PreCondit',        s:c_acc2,           'NONE',         'NONE',     s:c_acc2_cterm,     'NONE',             'NONE')
+call   SetC('PreProc',          s:c_acc6,           s:f_none,       s:f_none,   s:c_acc6_cterm,     s:f_none,           s:f_none,   s:f_none)
+call   SetC('Include',          s:c_acc2,           s:f_none,       s:f_none,   s:c_acc2_cterm,     s:f_none,           s:f_none,   s:f_none)
+call   SetC('Define',           s:c_acc2,           s:f_none,       s:f_none,   s:c_acc2_cterm,     s:f_none,           s:f_none,   s:f_none)
+call   SetC('Macro',            s:c_acc2,           s:f_none,       s:f_none,   s:c_acc2_cterm,     s:f_none,           s:f_none,   s:f_none)
+call   SetC('PreCondit',        s:c_acc2,           s:f_none,       s:f_none,   s:c_acc2_cterm,     s:f_none,           s:f_none,   s:f_none)
 
 " Data Types
-call   SetC('Type',             s:c_acc4,           'NONE',         'bold',     s:c_acc4_cterm,     'NONE',             'bold')
-call   SetC('StorageClass',     s:c_acc7,           'NONE',         'bold',     s:c_acc7_cterm,     'NONE',             'bold')
-call   SetC('Structure',        s:c_acc7,           'NONE',         'bold',     s:c_acc7_cterm,     'NONE',             'bold')
-call   SetC('Typedef',          s:c_acc7,           'NONE',         'bold',     s:c_acc7_cterm,     'NONE',             'bold')
+call   SetC('Type',             s:c_acc4,           s:f_none,       s:f_b,      s:c_acc4_cterm,     s:f_none,           s:f_b,      s:f_b)
+call   SetC('StorageClass',     s:c_acc7,           s:f_none,       s:f_b,      s:c_acc7_cterm,     s:f_none,           s:f_b,      s:f_b)
+call   SetC('Structure',        s:c_acc7,           s:f_none,       s:f_b,      s:c_acc7_cterm,     s:f_none,           s:f_b,      s:f_b)
+call   SetC('Typedef',          s:c_acc7,           s:f_none,       s:f_b,      s:c_acc7_cterm,     s:f_none,           s:f_b,      s:f_b)
 
 " Specials
-call   SetC('Special',          s:c_acc8,           'NONE',         'NONE',     s:c_acc8_cterm,     'NONE',             'NONE')
+call   SetC('Special',          s:c_acc8,           s:f_none,       s:f_none,   s:c_acc8_cterm,     s:f_none,           s:f_none,   s:f_none)
 
 " Comments
-call   SetC('Comment',          s:c_ltgray1,        'NONE',         'NONE',     s:c_ltgray1_cterm,  'NONE',             'NONE')
-call   SetC('SpecialComment',   s:c_acc1,           'NONE',         'bold',     s:c_acc1_cterm,     'NONE',             'bold')
+call   SetC('Comment',          s:c_ltgray1,        s:f_none,       s:f_none,   s:c_ltgray1_cterm,  s:f_none,           s:f_none,   s:f_none)
+call   SetC('SpecialComment',   s:c_acc1,           s:f_none,       s:f_b,      s:c_acc1_cterm,     s:f_none,           s:f_b,      s:f_b)
 
 " Special keywords
-call   SetC('Todo',             s:c_acc8,           s:c_gray2,      'bold',     s:c_acc8_cterm,     s:c_gray2_cterm,    'bold')
-call   SetC('Todo2',             s:c_acc8,           s:c_gray2,      'bold',     s:c_acc8_cterm,     s:c_gray2_cterm,    'bold')
+call   SetC('Todo',             s:c_acc8,           s:c_gray2,      s:f_b,      s:c_acc8_cterm,     s:c_gray2_cterm,    s:f_b,      s:f_b)
+call   SetC('Todo2',            s:c_acc8,           s:c_gray2,      s:f_b,      s:c_acc8_cterm,     s:c_gray2_cterm,    s:f_b,      s:f_b)
 match Todo2 /\<todo\>\c/
 
 " Vim Status Line
-call   SetC('StatusLine',       s:c_acc2,           'NONE',         'NONE',     s:c_acc2_cterm,     'NONE',             'NONE')
-call   SetC('StatusLineNC',     s:c_acc2,           'NONE',         'NONE',     s:c_acc2_cterm,     'NONE',             'NONE')
-call   SetC('Title',            s:c_acc2,           'NONE',         'NONE',     s:c_acc2_cterm,     'NONE',             'NONE')
-call   SetC('ModeMsg',          s:c_acc1,           'NONE',         'bold',     s:c_acc1_cterm,     'NONE',             'NONE')
-call   SetC('MoreMsg',          s:c_acc1,           'NONE',         'bold',     s:c_acc1_cterm,     'NONE',             'NONE')
-call   SetC('Error',            s:c_acc8,           'NONE',         'bold',     s:c_acc8_cterm,     'NONE',             'bold')
-call   SetC('ErrorMsg',         s:c_acc8,           'NONE',         'bold',     s:c_acc8_cterm,     'NONE',             'bold')
-call   SetC('WarningMsg',       s:c_acc3,           'NONE',         'bold',     s:c_acc3_cterm,     'NONE',             'bold')
+call   SetC('StatusLine',       s:c_acc2,           s:f_none,       s:f_none,   s:c_acc2_cterm,     s:f_none,           s:f_none,   s:f_none)
+call   SetC('StatusLineNC',     s:c_acc2,           s:f_none,       s:f_none,   s:c_acc2_cterm,     s:f_none,           s:f_none,   s:f_none)
+call   SetC('Title',            s:c_acc2,           s:f_none,       s:f_none,   s:c_acc2_cterm,     s:f_none,           s:f_none,   s:f_none)
+call   SetC('ModeMsg',          s:c_acc1,           s:f_none,       s:f_b,      s:c_acc1_cterm,     s:f_none,           s:f_b,      s:f_b)
+call   SetC('MoreMsg',          s:c_acc1,           s:f_none,       s:f_b,      s:c_acc1_cterm,     s:f_none,           s:f_b,      s:f_b)
+call   SetC('Error',            s:c_acc8,           s:f_none,       s:f_b,      s:c_acc8_cterm,     s:f_none,           s:f_b,      s:f_b)
+call   SetC('ErrorMsg',         s:c_acc8,           s:f_none,       s:f_b,      s:c_acc8_cterm,     s:f_none,           s:f_b,      s:f_b)
+call   SetC('WarningMsg',       s:c_acc3,           s:f_none,       s:f_b,      s:c_acc3_cterm,     s:f_none,           s:f_b,      s:f_b)
 
 " Syntax matching
-call   SetC('MatchParen',       '',                 s:c_gray2,     'bold,underline', '',           s:c_gray2_cterm,    'bold,underline')
+call   SetC('MatchParen',       s:f_none,           s:c_gray2,      s:f_bu,     s:f_none,           s:c_gray2_cterm,    s:f_bu,     s:f_bu)
 
