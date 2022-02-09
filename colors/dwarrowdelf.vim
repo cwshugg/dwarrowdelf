@@ -68,7 +68,7 @@ let s:c_ltgray2_cterm = '103'
 " Dwarrowdelf accent colors
 let s:c_acc1 = '#875FFF'        " PURPLE: amethyst gems in the mines
 let s:c_acc1_cterm = '99'
-let s:c_acc2 = '#8787FF'        " LAVENDER/INDIGO: crystal lamps lighting Durin's Way 
+let s:c_acc2 = '#8787FF'        " GREY BLUE: runes of power upon the door
 let s:c_acc2_cterm = '117'
 let s:c_acc3 = '#FFCE60'        " GOLD: flakes of gold glinting in Moria's deepest caverns
 let s:c_acc3_cterm = '220'
@@ -149,4 +149,5 @@ call   SetC('WarningMsg',       s:c_acc3,           s:f_none,       s:f_b,      
 
 " Syntax matching
 call   SetC('MatchParen',       s:f_none,           s:c_gray2,      s:f_bu,     s:f_none,           s:c_gray2_cterm,    s:f_bu,     s:f_bu)
+call   SetC('Search',           s:c_gray1,          s:c_acc5,       s:f_none,   s:c_gray1_cterm,    s:c_acc5_cterm,     s:f_none,   s:f_none)
 
