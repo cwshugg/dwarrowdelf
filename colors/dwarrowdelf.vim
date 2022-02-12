@@ -1,6 +1,6 @@
 " Dwarrowdelf theme for Vim.
 " Inspired by JRR Tolkien's Middle Earth and the great dwarven realm of
-" Khazad Dûm, called Dwarrowdelf. Founded by Durin I the Deathless during the
+" Khazad DÃ»m, called Dwarrowdelf. Founded by Durin I the Deathless during the
 " early years of Arda.
 " The colors were inspired by The Lord of the Rings Online's adaptation.
 "
@@ -14,7 +14,11 @@
 set background=dark
 highlight clear
 if exists('syntax_on')
-  syntax reset
+    syntax reset
+endif
+
+if has('gui_running')
+    highlight Normal guibg=black ctermbg=black
 endif
 
 let g:colors_name = 'dwarrowdelf'
@@ -61,14 +65,14 @@ let s:c_gray1 = '#1C1C1C'
 let s:c_gray1_cterm = '234'
 let s:c_gray2 = '#262626'
 let s:c_gray2_cterm = '235'
-let s:c_ltgray1 = '#989EAD'
+let s:c_ltgray1 = '#6C6C6C'
 let s:c_ltgray1_cterm = '242'
-let s:c_ltgray2 = '#C5D8E0'
+let s:c_ltgray2 = '#8787AF'
 let s:c_ltgray2_cterm = '103'
 " Dwarrowdelf accent colors
 let s:c_acc1 = '#875FFF'        " PURPLE: amethyst gems in the mines
 let s:c_acc1_cterm = '99'
-let s:c_acc2 = '#8787FF'        " GREY BLUE: runes of power upon the door
+let s:c_acc2 = '#87D7FF'        " GREY BLUE: runes of power upon the door
 let s:c_acc2_cterm = '117'
 let s:c_acc3 = '#FFCE60'        " GOLD: flakes of gold glinting in Moria's deepest caverns
 let s:c_acc3_cterm = '220'
@@ -76,7 +80,7 @@ let s:c_acc4 = '#00D700'        " GREEN: emerald gems in the mines and moss arou
 let s:c_acc4_cterm = '40'
 let s:c_acc5 = '#5F87FF'        " BLUE: the shimmering waters of Mirrormere
 let s:c_acc5_cterm = '69'
-let s:c_acc6 = '#BBDCEB'        " LIGHT BLUE: snowfall on Zirakzigil
+let s:c_acc6 = '#AFFFFF'        " LIGHT BLUE: snowfall on Zirakzigil
 let s:c_acc6_cterm = '159'
 let s:c_acc7 = s:c_acc5         " (same as accent 5)
 let s:c_acc7_cterm = s:c_acc5_cterm
