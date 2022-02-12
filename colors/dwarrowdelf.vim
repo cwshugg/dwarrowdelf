@@ -151,3 +151,8 @@ call   SetC('WarningMsg',       s:c_acc3,           s:f_none,       s:f_b,      
 call   SetC('MatchParen',       s:f_none,           s:c_gray2,      s:f_bu,     s:f_none,           s:c_gray2_cterm,    s:f_bu,     s:f_bu)
 call   SetC('Search',           s:c_gray1,          s:c_acc5,       s:f_none,   s:c_gray1_cterm,    s:c_acc5_cterm,     s:f_none,   s:f_none)
 
+" if we're running gVim, make sure to set the background to black
+if has('gui_running')
+    highlight Normal guibg=black ctermbg=black
+endif
+
