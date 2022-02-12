@@ -57,9 +57,9 @@ endfunction
 " Dwarrowdelf whites and grays
 let s:c_white = '#E6E8E9'
 let s:c_white_cterm = '254'
-let s:c_gray1 = '#565C6C'
+let s:c_gray1 = '#1C1C1C'
 let s:c_gray1_cterm = '234'
-let s:c_gray2 = '#6774A1'
+let s:c_gray2 = '#262626'
 let s:c_gray2_cterm = '235'
 let s:c_ltgray1 = '#989EAD'
 let s:c_ltgray1_cterm = '242'
