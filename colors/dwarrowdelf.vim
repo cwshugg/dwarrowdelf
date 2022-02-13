@@ -151,9 +151,11 @@ call   SetC('Error',            s:c_acc8,           s:f_none,       s:f_b,      
 call   SetC('ErrorMsg',         s:c_acc8,           s:f_none,       s:f_b,      s:c_acc8_cterm,     s:f_none,           s:f_b,      s:f_b)
 call   SetC('WarningMsg',       s:c_acc3,           s:f_none,       s:f_b,      s:c_acc3_cterm,     s:f_none,           s:f_b,      s:f_b)
 
-" Syntax matching
+" Syntax matching and autocomplete
 call   SetC('MatchParen',       s:f_none,           s:c_gray2,      s:f_bu,     s:f_none,           s:c_gray2_cterm,    s:f_bu,     s:f_bu)
 call   SetC('Search',           s:c_gray1,          s:c_acc5,       s:f_none,   s:c_gray1_cterm,    s:c_acc5_cterm,     s:f_none,   s:f_none)
+call   SetC('Pmenu',            s:c_acc2,           s:c_gray2,      s:f_none,   s:c_acc2_cterm,     s:c_gray2_cterm,    s:f_none,   s:f_none)
+call   SetC('PmenuSel',         s:c_acc6,           s:c_ltgray1,    s:f_none,   s:c_acc6_cterm,     s:c_ltgray1_cterm,  s:f_none,   s:f_none)
 
 " if we're running gVim, make sure to set the background to black
 if has('gui_running')
