@@ -102,6 +102,8 @@ call   SetC('CursorLine',       s:f_none,           s:c_gray1,      s:f_none,   
 call   SetC('CursorColumn',     s:f_none,           s:c_gray1,      s:f_none,   s:f_none,           s:c_gray1_cterm,    s:f_none,   s:f_none)
 call   SetC('LineNr',           s:c_ltgray2,        s:f_none,       s:f_none,   s:c_ltgray2_cterm,  s:f_none,           s:f_none,   s:f_none)
 call   SetC('CursorLineNr',     s:c_acc3,           s:c_gray1,      s:f_b,      s:c_acc3_cterm,     s:c_gray1_cterm,    s:f_b,      s:f_b) 
+call   SetC('ColorColumn',      s:f_none,           s:c_gray2,      s:f_none,   s:f_none,           s:c_gray2_cterm,    s:f_none,   s:f_none)
+
 " Constants
 call   SetC('Constant',         s:c_acc5,           s:f_none,       s:f_none,   s:c_acc5_cterm,     s:f_none,           s:f_none,   s:f_none)
 call   SetC('String',           s:c_acc3,           s:f_none,       s:f_none,   s:c_acc3_cterm,     s:f_none,           s:f_none,   s:f_none)
