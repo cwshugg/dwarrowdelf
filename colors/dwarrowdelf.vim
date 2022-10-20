@@ -57,14 +57,23 @@ function! SetC(gname, ...)
     execute cmdstr
 endfunction
 
+
+" -------------------------------- Formatting -------------------------------- "
+set fillchars=vert:\            " set the vertical split character to a space
+
+
 " --------------------------------- COLORS ---------------------------------- "
 " Dwarrowdelf whites and grays
+let s:c_black = '#000000'
+let s:c_black_cterm = '0'
 let s:c_white = '#E6E8E9'
 let s:c_white_cterm = '254'
 let s:c_gray1 = '#1C1C1C'
 let s:c_gray1_cterm = '234'
 let s:c_gray2 = '#262626'
 let s:c_gray2_cterm = '235'
+let s:c_gray3 = '#3A3A3A'
+let s:c_gray3_cterm = '237'
 let s:c_ltgray1 = '#6C6C6C'
 let s:c_ltgray1_cterm = '242'
 let s:c_ltgray2 = '#8787AF'
@@ -82,8 +91,8 @@ let s:c_acc5 = '#5F87FF'        " BLUE: the shimmering waters of Mirrormere
 let s:c_acc5_cterm = '69'
 let s:c_acc6 = '#AFFFFF'        " LIGHT BLUE: snowfall on Zirakzigil
 let s:c_acc6_cterm = '159'
-let s:c_acc7 = s:c_acc5         " (same as accent 5)
-let s:c_acc7_cterm = s:c_acc5_cterm
+let s:c_acc7 = '#5F87D7'        " DARK BLUE/PURPLE/GRAY
+let s:c_acc7_cterm = '68'
 let s:c_acc8 = '#D70000'        " RED: the dark fires of Durin's Bane
 let s:c_acc8_cterm = '160'
 " Formatting strings
@@ -103,6 +112,7 @@ call   SetC('CursorColumn',     s:f_none,           s:c_gray1,      s:f_none,   
 call   SetC('LineNr',           s:c_ltgray2,        s:f_none,       s:f_none,   s:c_ltgray2_cterm,  s:f_none,           s:f_none,   s:f_none)
 call   SetC('CursorLineNr',     s:c_acc3,           s:c_gray1,      s:f_b,      s:c_acc3_cterm,     s:c_gray1_cterm,    s:f_b,      s:f_b) 
 call   SetC('ColorColumn',      s:f_none,           s:c_gray2,      s:f_none,   s:f_none,           s:c_gray2_cterm,    s:f_none,   s:f_none)
+call   SetC('EndOfBuffer',      s:c_black,          s:c_black,      s:f_none,   s:c_black_cterm,    s:c_black_cterm,    s:f_none,   s:f_none)
 
 " Constants
 call   SetC('Constant',         s:c_acc5,           s:f_none,       s:f_none,   s:c_acc5_cterm,     s:f_none,           s:f_none,   s:f_none)
@@ -144,8 +154,8 @@ call   SetC('Todo2',            s:c_acc8,           s:c_gray2,      s:f_b,      
 match Todo2 /\<todo\>\c/
 
 " Vim Status Line
-call   SetC('StatusLine',       s:c_acc2,           s:f_none,       s:f_none,   s:c_acc2_cterm,     s:f_none,           s:f_none,   s:f_none)
-call   SetC('StatusLineNC',     s:c_acc2,           s:f_none,       s:f_none,   s:c_acc2_cterm,     s:f_none,           s:f_none,   s:f_none)
+call   SetC('StatusLine',       s:c_acc2,           s:c_gray3,      s:f_none,   s:c_acc2_cterm,     s:c_gray3_cterm,    s:f_none,   s:f_none)
+call   SetC('StatusLineNC',     s:c_acc2,           s:c_gray2,      s:f_none,   s:c_acc2_cterm,     s:c_gray2_cterm,    s:f_none,   s:f_none)
 call   SetC('Title',            s:c_acc2,           s:f_none,       s:f_none,   s:c_acc2_cterm,     s:f_none,           s:f_none,   s:f_none)
 call   SetC('ModeMsg',          s:c_acc1,           s:f_none,       s:f_b,      s:c_acc1_cterm,     s:f_none,           s:f_b,      s:f_b)
 call   SetC('MoreMsg',          s:c_acc1,           s:f_none,       s:f_b,      s:c_acc1_cterm,     s:f_none,           s:f_b,      s:f_b)
@@ -159,8 +169,6 @@ call   SetC('Search',           s:c_gray1,          s:c_acc5,       s:f_none,   
 call   SetC('Pmenu',            s:c_acc2,           s:c_gray2,      s:f_none,   s:c_acc2_cterm,     s:c_gray2_cterm,    s:f_none,   s:f_none)
 call   SetC('PmenuSel',         s:c_acc6,           s:c_ltgray1,    s:f_none,   s:c_acc6_cterm,     s:c_ltgray1_cterm,  s:f_none,   s:f_none)
 
-" if we're running gVim, make sure to set the background to black
-if has('gui_running')
-    highlight Normal guibg=black ctermbg=black
-endif
+" Window splitting
+call   SetC('VertSplit',        s:c_gray3,          s:c_gray3,      s:f_none,   s:c_gray3_cterm,    s:c_gray3_cterm,    s:f_none,   s:f_none)
 
