@@ -186,18 +186,23 @@ call   SetC('Todo',             s:c_acc9,           s:c_gray2,      s:f_b,      
 call   SetC('Todo2',            s:c_acc9,           s:c_gray2,      s:f_b,      s:c_acc9_cterm,     s:c_gray2_cterm,    s:f_b,      s:f_b)
 call matchadd('Todo2', 'TODO', 10)
 
+" DEBUGGING highlighting
+hi def dwd_dev_debug2 guibg=black
+call matchadd('dwd_dev_debug2', 'DEBUGGING', 10)
+call   SetC('dwd_dev_debug2',   s:c_acc10,          s:c_gray2,      s:f_b,      s:c_acc10_cterm,    s:c_gray2_cterm,    s:f_b,      s:f_b)
+
 " DEBUG highlighting
 hi def dwd_dev_debug guibg=black
-call matchadd('dwd_dev_debug', 'DEBUG', 10)
+call matchadd('dwd_dev_debug', 'DEBUG', 9)
 call   SetC('dwd_dev_debug',    s:c_acc10,          s:c_gray2,      s:f_b,      s:c_acc10_cterm,    s:c_gray2_cterm,    s:f_b,      s:f_b)
+
+" BUG highlighting
+hi def dwd_dev_bug guibg=black
+call matchadd('dwd_dev_bug', 'BUG', 8)
+call   SetC('dwd_dev_bug' ,    s:c_acc12,          s:c_gray2,      s:f_b,      s:c_acc12_cterm,    s:c_gray2_cterm,    s:f_b,      s:f_b)
 
 " NOTE highlighting
 hi def dwd_dev_note guibg=black
 call matchadd('dwd_dev_note', 'NOTE', 10)
 call   SetC('dwd_dev_note' ,    s:c_acc11,          s:c_gray2,      s:f_b,      s:c_acc11_cterm,    s:c_gray2_cterm,    s:f_b,      s:f_b)
-
-" BUG highlighting
-hi def dwd_dev_bug guibg=black
-call matchadd('dwd_dev_bug', 'BUG', 9)
-call   SetC('dwd_dev_bug' ,    s:c_acc12,          s:c_gray2,      s:f_b,      s:c_acc12_cterm,    s:c_gray2_cterm,    s:f_b,      s:f_b)
 
