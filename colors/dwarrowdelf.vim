@@ -72,12 +72,15 @@ let s:c_gray1 = '#1C1C1C'
 let s:c_gray1_cterm = '234'
 let s:c_gray2 = '#262626'
 let s:c_gray2_cterm = '235'
-let s:c_gray3 = '#3A3A3A'
-let s:c_gray3_cterm = '237'
+let s:c_gray3 = '#303030'
+let s:c_gray3_cterm = '236'
+let s:c_gray4 = '#3A3A3A'
+let s:c_gray4_cterm = '237'
 let s:c_ltgray1 = '#6C6C6C'
 let s:c_ltgray1_cterm = '242'
 let s:c_ltgray2 = '#8787AF'
 let s:c_ltgray2_cterm = '103'
+
 " Dwarrowdelf accent colors
 let s:c_acc1 = '#875FFF'        " PURPLE: amethyst gems in the mines
 let s:c_acc1_cterm = '99'
@@ -103,6 +106,7 @@ let s:c_acc11 = '#5F8787'       " MOSSY GREEN: moss around the watcher's lake
 let s:c_acc11_cterm = '66'
 let s:c_acc12 = '#AF00D7'       " BRIGHT PURPLE: shining crystal lamps
 let s:c_acc12_cterm = '128'
+
 " Formatting strings
 let s:f_b = 'bold'              " bold formatting
 let s:f_u = 'underline'         " underline formatting
@@ -157,7 +161,7 @@ call   SetC('Comment',          s:c_ltgray1,        s:f_none,       s:f_none,   
 call   SetC('SpecialComment',   s:c_acc1,           s:f_none,       s:f_b,      s:c_acc1_cterm,     s:f_none,           s:f_b,      s:f_b)
 
 " Vim Status Line
-call   SetC('StatusLine',       s:c_acc2,           s:c_gray3,      s:f_none,   s:c_acc2_cterm,     s:c_gray3_cterm,    s:f_none,   s:f_none)
+call   SetC('StatusLine',       s:c_acc2,           s:c_gray4,      s:f_none,   s:c_acc2_cterm,     s:c_gray4_cterm,    s:f_none,   s:f_none)
 call   SetC('StatusLineNC',     s:c_acc2,           s:c_gray2,      s:f_none,   s:c_acc2_cterm,     s:c_gray2_cterm,    s:f_none,   s:f_none)
 call   SetC('Title',            s:c_acc2,           s:f_none,       s:f_none,   s:c_acc2_cterm,     s:f_none,           s:f_none,   s:f_none)
 call   SetC('ModeMsg',          s:c_acc1,           s:f_none,       s:f_b,      s:c_acc1_cterm,     s:f_none,           s:f_b,      s:f_b)
@@ -173,7 +177,7 @@ call   SetC('Pmenu',            s:c_acc2,           s:c_gray2,      s:f_none,   
 call   SetC('PmenuSel',         s:c_acc6,           s:c_ltgray1,    s:f_none,   s:c_acc6_cterm,     s:c_ltgray1_cterm,  s:f_none,   s:f_none)
 
 " Window splitting
-call   SetC('VertSplit',        s:c_gray3,          s:c_gray3,      s:f_none,   s:c_gray3_cterm,    s:c_gray3_cterm,    s:f_none,   s:f_none)
+call   SetC('VertSplit',        s:c_gray4,          s:c_gray4,      s:f_none,   s:c_gray4_cterm,    s:c_gray4_cterm,    s:f_none,   s:f_none)
 
 " ----------------------- Custom Keyword Highlighting ------------------------ "
 " FIXME highlighting
@@ -199,10 +203,15 @@ call   SetC('dwd_dev_debug',    s:c_acc10,          s:c_gray2,      s:f_b,      
 " BUG highlighting
 hi def dwd_dev_bug guibg=black
 call matchadd('dwd_dev_bug', 'BUG', 8)
-call   SetC('dwd_dev_bug' ,    s:c_acc12,          s:c_gray2,      s:f_b,      s:c_acc12_cterm,    s:c_gray2_cterm,    s:f_b,      s:f_b)
+call   SetC('dwd_dev_bug' ,    s:c_acc12,           s:c_gray2,      s:f_b,      s:c_acc12_cterm,    s:c_gray2_cterm,    s:f_b,      s:f_b)
 
 " NOTE highlighting
 hi def dwd_dev_note guibg=black
 call matchadd('dwd_dev_note', 'NOTE', 10)
 call   SetC('dwd_dev_note' ,    s:c_acc11,          s:c_gray2,      s:f_b,      s:c_acc11_cterm,    s:c_gray2_cterm,    s:f_b,      s:f_b)
+
+" GOOD highlighting
+hi def dwd_dev_good guibg=black
+call matchadd('dwd_dev_good', 'GOOD', 10)
+call   SetC('dwd_dev_good' ,    s:c_acc4,           s:c_gray2,      s:f_b,      s:c_acc4_cterm,     s:c_gray2_cterm,    s:f_b,      s:f_b)
 
