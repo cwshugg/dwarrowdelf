@@ -107,6 +107,14 @@ let s:c_acc11_cterm = '66'
 let s:c_acc12 = '#AF00D7'       " BRIGHT PURPLE: shining crystal lamps
 let s:c_acc12_cterm = '128'
 
+" Dwarrowdelf dim colors
+let s:c_dim1 = '#005f00'        " DARK GREEN
+let s:c_dim1_cterm = '22'
+let s:c_dim2 = '#5f0000'        " DARK RED
+let s:c_dim2_cterm = '52'
+let s:c_dim3 = '#5f5f00'        " DARK YELLOW/GREEN
+let s:c_dim3_cterm = '58'
+
 " Formatting strings
 let s:f_b = 'bold'              " bold formatting
 let s:f_u = 'underline'         " underline formatting
@@ -179,7 +187,14 @@ call   SetC('PmenuSel',         s:c_acc6,           s:c_ltgray1,    s:f_none,   
 " Window splitting
 call   SetC('VertSplit',        s:c_gray4,          s:c_gray4,      s:f_none,   s:c_gray4_cterm,    s:c_gray4_cterm,    s:f_none,   s:f_none)
 
+" VimDiff highlighting
+call   SetC('DiffAdd',          s:f_none,           s:c_dim1,       s:f_none,   s:f_none,           s:c_dim1_cterm,     s:f_none,   s:f_none)
+call   SetC('DiffDelete',       s:f_none,           s:c_dim2,       s:f_none,   s:f_none,           s:c_dim2_cterm,     s:f_none,   s:f_none)
+call   SetC('DiffChange',       s:f_none,           s:c_dim3,       s:f_none,   s:f_none,           s:c_dim3_cterm,     s:f_none,   s:f_none)
+call   SetC('DiffText',         s:f_none,           s:c_dim3,       s:f_none,   s:f_none,           s:c_dim3_cterm,     s:f_none,   s:f_none)
+
 " ----------------------- Custom Keyword Highlighting ------------------------ "
+"           GROUP NAME          GUIFG               GUIBG           GUI         CTERMFG             CTERMBG             CTERM       TERM
 " FIXME highlighting
 hi def dwd_dev_fixme guibg=black
 call matchadd('dwd_dev_fixme', 'FIXME', 10)
