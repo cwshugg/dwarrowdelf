@@ -10,27 +10,11 @@ To install dwarrowdelf, simply drop the `dwarrowdelf.vim` file into your `~/.vim
 colorscheme dwarrowdelf
 ```
 
-# Screenshots
+## Airline Theme
 
-Below are a few example screenshots of dwarrowdelf in use.
+Optionally I've included a theme for Vim Airline. If you'd like to use this, drop it into `~/.vim/bundle/vim-airline-themes/autoload/airline/themes/dwarrowdelf.vim`, then set the theme accordingly:
 
-## C (header)
-
-![](https://shugg.dev/images/dwarrowdelf/example_c_header.png)
-
-## C (source)
-
-![](https://shugg.dev/images/dwarrowdelf/example_c_source.png)
-
-## Python
-
-![](https://shugg.dev/images/dwarrowdelf/example_python.png)
-
-## Rust
-
-![](https://shugg.dev/images/dwarrowdelf/example_rust.png)
-
-## HTML
-
-![](https://shugg.dev/images/dwarrowdelf/example_html.png)
+```vim
+let g:airline_theme='dwarrowdelf'
+```
 
