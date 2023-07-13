@@ -187,6 +187,11 @@ call   SetC('PmenuSel',         s:c_acc6,           s:c_ltgray1,    s:f_none,   
 " Window splitting
 call   SetC('VertSplit',        s:c_gray4,          s:c_gray4,      s:f_none,   s:c_gray4_cterm,    s:c_gray4_cterm,    s:f_none,   s:f_none)
 
+" Tabs
+call   SetC('TabLine',          s:c_white,          s:c_gray2,      s:f_none,   s:c_white_cterm,    s:c_gray2_cterm,    s:f_none,   s:f_none)
+call   SetC('TabLineSel',       s:c_acc3,           s:c_gray4,      s:f_none,   s:c_acc3_cterm,     s:c_gray4_cterm,    s:f_none,   s:f_none)
+call   SetC('TabLineFill',      s:f_none,           s:c_black,      s:f_none,   s:f_none,           s:c_black_cterm,    s:f_none,   s:f_none)
+
 " VimDiff highlighting
 call   SetC('DiffAdd',          s:f_none,           s:c_dim1,       s:f_none,   s:f_none,           s:c_dim1_cterm,     s:f_none,   s:f_none)
 call   SetC('DiffDelete',       s:f_none,           s:c_dim2,       s:f_none,   s:f_none,           s:c_dim2_cterm,     s:f_none,   s:f_none)
