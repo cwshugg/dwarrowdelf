@@ -1,10 +1,10 @@
 " Dwarrowdelf theme for Vim Airline.
+"
 " Inspired by JRR Tolkien's Middle Earth and the great dwarven realm of
 " Khazad DÃ»m, called Dwarrowdelf. Founded by Durin I the Deathless during the
 " early years of Arda.
-" The colors were inspired by The Lord of the Rings Online's adaptation.
 "
-" I adapted this theme from dwarrowdelf.vim, one of the existing airline themes.
+" The colors were inspired by The Lord of the Rings Online's adaptation.
 "
 "   Connor Shugg (connor@shugg.dev)
 "   https://github.com/cwshugg
