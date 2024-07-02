@@ -17,10 +17,6 @@ if exists('syntax_on')
     syntax reset
 endif
 
-if has('gui_running')
-    highlight Normal guibg=black ctermbg=black
-endif
-
 let g:colors_name = 'dwarrowdelf'
 
 " ---------------------------- HELPER FUNCTIONS ----------------------------- "
@@ -124,7 +120,7 @@ let s:f_none = 'NONE'           " when NO formatting is applied
 
 " ---------------------------- COLOR ASSIGNMENT ----------------------------- "
 "           GROUP NAME          GUIFG               GUIBG           GUI         CTERMFG             CTERMBG             CTERM       TERM
-call   SetC('Normal',           s:c_white,          s:f_none,       s:f_none,   s:c_white_cterm,    s:f_none,           s:f_none,   s:f_none)
+call   SetC('Normal',           s:c_white,          s:c_black,      s:f_none,   s:c_white_cterm,    s:c_black_cterm,    s:f_none,   s:f_none)
 
 " Cursor line/column and line number settings
 call   SetC('CursorLine',       s:f_none,           s:c_gray1,      s:f_none,   s:f_none,           s:c_gray1_cterm,    s:f_none,   s:f_none)
@@ -199,16 +195,16 @@ call   SetC('DiffChange',       s:f_none,           s:c_dim3,       s:f_none,   
 call   SetC('DiffText',         s:f_none,           s:c_dim3,       s:f_none,   s:f_none,           s:c_dim3_cterm,     s:f_none,   s:f_none)
 
 " Startify highlighting
-call   SetC('StartifyBracket',  s:f_none,           s:c_ltgray1,    s:f_none,   s:c_ltgray1_cterm,  s:f_none,           s:f_none,   s:f_none)
-call   SetC('StartifyNumber',   s:f_none,           s:c_acc10,      s:f_none,   s:c_acc10_cterm,    s:f_none,           s:f_none,   s:f_none)
-call   SetC('StartifyHeader',   s:f_none,           s:c_acc11,      s:f_none,   s:c_acc11_cterm,    s:f_none,           s:f_none,   s:f_none)
-call   SetC('StartifyFooter',   s:f_none,           s:c_acc11,      s:f_none,   s:c_acc11_cterm,    s:f_none,           s:f_none,   s:f_none)
-call   SetC('StartifyPath',     s:f_none,           s:c_ltgray2,    s:f_none,   s:c_ltgray2_cterm,  s:f_none,           s:f_none,   s:f_none)
-call   SetC('StartifyFile',     s:f_none,           s:c_acc5,       s:f_none,   s:c_acc5_cterm,     s:f_none,           s:f_none,   s:f_none)
-call   SetC('StartifySlash',    s:f_none,           s:c_acc2,       s:f_none,   s:c_acc2_cterm,     s:f_none,           s:f_none,   s:f_none)
-call   SetC('StartifySection',  s:f_none,           s:c_acc8,       s:f_none,   s:c_acc8_cterm,     s:f_none,           s:f_none,   s:f_none)
-call   SetC('StartifySpecial',  s:f_none,           s:c_acc4,       s:f_none,   s:c_acc4_cterm,     s:f_none,           s:f_none,   s:f_none)
-call   SetC('StartifyVar',      s:f_none,           s:c_acc6,       s:f_none,   s:c_acc6_cterm,     s:f_none,           s:f_none,   s:f_none)
+call   SetC('StartifyBracket',  s:c_ltgray1,        s:f_none,       s:f_none,   s:c_ltgray1_cterm,  s:f_none,           s:f_none,   s:f_none)
+call   SetC('StartifyNumber',   s:c_acc10,          s:f_none,       s:f_none,   s:c_acc10_cterm,    s:f_none,           s:f_none,   s:f_none)
+call   SetC('StartifyHeader',   s:c_acc11,          s:f_none,       s:f_none,   s:c_acc11_cterm,    s:f_none,           s:f_none,   s:f_none)
+call   SetC('StartifyFooter',   s:c_acc11,          s:f_none,       s:f_none,   s:c_acc11_cterm,    s:f_none,           s:f_none,   s:f_none)
+call   SetC('StartifyPath',     s:c_ltgray2,        s:f_none,       s:f_none,   s:c_ltgray2_cterm,  s:f_none,           s:f_none,   s:f_none)
+call   SetC('StartifyFile',     s:c_acc5,           s:f_none,       s:f_none,   s:c_acc5_cterm,     s:f_none,           s:f_none,   s:f_none)
+call   SetC('StartifySlash',    s:c_acc2,           s:f_none,       s:f_none,   s:c_acc2_cterm,     s:f_none,           s:f_none,   s:f_none)
+call   SetC('StartifySection',  s:c_acc8,           s:f_none,       s:f_none,   s:c_acc8_cterm,     s:f_none,           s:f_none,   s:f_none)
+call   SetC('StartifySpecial',  s:c_acc4,           s:f_none,       s:f_none,   s:c_acc4_cterm,     s:f_none,           s:f_none,   s:f_none)
+call   SetC('StartifyVar',      s:c_acc6,           s:f_none,       s:f_none,   s:c_acc6_cterm,     s:f_none,           s:f_none,   s:f_none)
 
 
 " ----------------------- Custom Keyword Highlighting ------------------------ "
