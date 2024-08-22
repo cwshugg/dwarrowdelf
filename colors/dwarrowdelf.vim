@@ -177,8 +177,8 @@ call   SetC('WarningMsg',       s:c_acc3,           s:f_none,       s:f_b,      
 " Syntax matching and autocomplete
 call   SetC('MatchParen',       s:f_none,           s:c_gray2,      s:f_bu,     s:f_none,           s:c_gray2_cterm,    s:f_bu,     s:f_bu)
 call   SetC('Search',           s:c_gray1,          s:c_acc5,       s:f_none,   s:c_gray1_cterm,    s:c_acc5_cterm,     s:f_none,   s:f_none)
-call   SetC('Pmenu',            s:c_acc2,           s:c_gray2,      s:f_none,   s:c_acc2_cterm,     s:c_gray2_cterm,    s:f_none,   s:f_none)
-call   SetC('PmenuSel',         s:c_acc6,           s:c_ltgray1,    s:f_none,   s:c_acc6_cterm,     s:c_ltgray1_cterm,  s:f_none,   s:f_none)
+call   SetC('Pmenu',            s:c_acc10,          s:c_gray2,      s:f_none,   s:c_acc10_cterm,    s:c_gray2_cterm,    s:f_none,   s:f_none)
+call   SetC('PmenuSel',         s:c_acc3,           s:c_ltgray1,    s:f_none,   s:c_acc3_cterm,     s:c_ltgray1_cterm,  s:f_none,   s:f_none)
 
 " Window splitting
 call   SetC('VertSplit',        s:c_gray4,          s:c_gray4,      s:f_none,   s:c_gray4_cterm,    s:c_gray4_cterm,    s:f_none,   s:f_none)
@@ -205,6 +205,13 @@ call   SetC('StartifySlash',    s:c_acc2,           s:f_none,       s:f_none,   
 call   SetC('StartifySection',  s:c_acc8,           s:f_none,       s:f_none,   s:c_acc8_cterm,     s:f_none,           s:f_none,   s:f_none)
 call   SetC('StartifySpecial',  s:c_acc4,           s:f_none,       s:f_none,   s:c_acc4_cterm,     s:f_none,           s:f_none,   s:f_none)
 call   SetC('StartifyVar',      s:c_acc6,           s:f_none,       s:f_none,   s:c_acc6_cterm,     s:f_none,           s:f_none,   s:f_none)
+
+
+" ----------------------------- ALE Highlighting ----------------------------- "
+call   SetC('ALESignColumnWithErrors',
+                              \ s:c_acc8,           s:c_black,      s:f_none,   s:c_acc8_cterm,     s:c_black_cterm,    s:f_none,   s:f_none)
+call   SetC('ALESignColumnWithoutErrors',
+                              \ s:f_none,           s:c_black,      s:f_none,   s:f_none,           s:c_black_cterm,    s:f_none,   s:f_none)
 
 
 " ------------------------------- Rust Syntax -------------------------------- "
