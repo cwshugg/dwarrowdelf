@@ -230,11 +230,17 @@ call   SetC('rustCommentBlockDocNestError',
 call   SetC('rustAssert',
                               \ s:c_acc9,           s:f_none,       s:f_none,   s:c_acc9_cterm,     s:f_none,           s:f_none,   s:f_none)
 call   SetC('rustPanic',
-                              \ s:c_acc8,           s:f_none,       s:f_none,   s:c_acc8_cterm,     s:f_none,           s:f_none,   s:f_none)
+                              \ s:c_acc9,           s:f_none,       s:f_none,   s:c_acc9_cterm,     s:f_none,           s:f_none,   s:f_none)
 
 " Rust attributes
 call   SetC('rustAttribute',
                               \ s:c_acc11,          s:f_none,       s:f_none,   s:c_acc11_cterm,    s:f_none,           s:f_none,   s:f_none)
+
+" Rust modules
+call   SetC('rustModPath',
+                              \ s:c_acc2,           s:f_none,       s:f_none,   s:c_acc2_cterm,     s:f_none,           s:f_none,   s:f_none)
+call   SetC('rustModPathSep',
+                              \ s:c_acc7,           s:f_none,       s:f_none,   s:c_acc7_cterm,     s:f_none,           s:f_none,   s:f_none)
 
 
 " ----------------------- Custom Keyword Highlighting ------------------------ "
