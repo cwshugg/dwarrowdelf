@@ -207,6 +207,36 @@ call   SetC('StartifySpecial',  s:c_acc4,           s:f_none,       s:f_none,   
 call   SetC('StartifyVar',      s:c_acc6,           s:f_none,       s:f_none,   s:c_acc6_cterm,     s:f_none,           s:f_none,   s:f_none)
 
 
+" ------------------------------- Rust Syntax -------------------------------- "
+" Rust comments
+call   SetC('rustCommentLine',
+                              \ s:c_ltgray1,        s:f_none,       s:f_none,   s:c_ltgray1_cterm,  s:f_none,           s:f_none,   s:f_none)
+call   SetC('rustCommentBlock',
+                              \ s:c_ltgray1,        s:f_none,       s:f_none,   s:c_ltgray1_cterm,  s:f_none,           s:f_none,   s:f_none)
+call   SetC('rustCommentLineDoc',
+                              \ s:c_ltgray1,        s:f_none,       s:f_none,   s:c_ltgray1_cterm,  s:f_none,           s:f_none,   s:f_none)
+call   SetC('rustCommentBlockNest',
+                              \ s:c_ltgray1,        s:f_none,       s:f_none,   s:c_ltgray1_cterm,  s:f_none,           s:f_none,   s:f_none)
+call   SetC('rustCommentBlockDoc',
+                              \ s:c_ltgray1,        s:f_none,       s:f_none,   s:c_ltgray1_cterm,  s:f_none,           s:f_none,   s:f_none)
+call   SetC('rustCommentBlockDocNest',
+                              \ s:c_ltgray1,        s:f_none,       s:f_none,   s:c_ltgray1_cterm,  s:f_none,           s:f_none,   s:f_none)
+call   SetC('rustCommentBlockDocRustCode',
+                              \ s:c_ltgray1,        s:f_none,       s:f_none,   s:c_ltgray1_cterm,  s:f_none,           s:f_none,   s:f_none)
+call   SetC('rustCommentBlockDocNestError',
+                              \ s:c_acc8,           s:f_none,       s:f_none,   s:c_acc8_cterm,     s:f_none,           s:f_none,   s:f_none)
+
+" Rust macros/panic/assert
+call   SetC('rustAssert',
+                              \ s:c_acc9,           s:f_none,       s:f_none,   s:c_acc9_cterm,     s:f_none,           s:f_none,   s:f_none)
+call   SetC('rustPanic',
+                              \ s:c_acc8,           s:f_none,       s:f_none,   s:c_acc8_cterm,     s:f_none,           s:f_none,   s:f_none)
+
+" Rust attributes
+call   SetC('rustAttribute',
+                              \ s:c_acc11,          s:f_none,       s:f_none,   s:c_acc11_cterm,    s:f_none,           s:f_none,   s:f_none)
+
+
 " ----------------------- Custom Keyword Highlighting ------------------------ "
 "           GROUP NAME          GUIFG               GUIBG           GUI         CTERMFG             CTERMBG             CTERM       TERM
 " FIXME highlighting
