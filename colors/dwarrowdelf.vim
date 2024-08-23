@@ -212,6 +212,14 @@ call   SetC('ALESignColumnWithErrors',
                               \ s:c_acc8,           s:c_black,      s:f_none,   s:c_acc8_cterm,     s:c_black_cterm,    s:f_none,   s:f_none)
 call   SetC('ALESignColumnWithoutErrors',
                               \ s:f_none,           s:c_black,      s:f_none,   s:f_none,           s:c_black_cterm,    s:f_none,   s:f_none)
+call   SetC('ALEError',
+                              \ s:f_none,           s:c_dim2,       s:f_none,   s:f_none,           s:c_dim2_cterm,     s:f_none,   s:f_none)
+call   SetC('ALEStyleError',
+                              \ s:f_none,           s:c_dim2,       s:f_none,   s:f_none,           s:c_dim2_cterm,     s:f_none,   s:f_none)
+call   SetC('ALEWarning',
+                              \ s:f_none,           s:f_none,       s:f_none,   s:f_none,           s:f_none,           s:f_none,   s:f_none)
+call   SetC('ALEStyleWarning',
+                              \ s:f_none,           s:f_none,       s:f_none,   s:f_none,           s:f_none,           s:f_none,   s:f_none)
 
 
 " ------------------------------- Rust Syntax -------------------------------- "
