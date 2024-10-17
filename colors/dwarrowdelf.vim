@@ -108,8 +108,10 @@ let s:c_dim1 = '#005f00'        " DARK GREEN
 let s:c_dim1_cterm = '22'
 let s:c_dim2 = '#5f0000'        " DARK RED
 let s:c_dim2_cterm = '52'
-let s:c_dim3 = '#5f5f00'        " DARK YELLOW/GREEN
+let s:c_dim3 = '#5f5f00'        " DARK YELLOW
 let s:c_dim3_cterm = '58'
+let s:c_dim4 = '#005f87'        " DARK BLUE
+let s:c_dim4_cterm = '24'
 
 " Formatting strings
 let s:f_b = 'bold'              " bold formatting
@@ -220,6 +222,22 @@ call   SetC('ALEWarning',
                               \ s:f_none,           s:f_none,       s:f_none,   s:f_none,           s:f_none,           s:f_none,   s:f_none)
 call   SetC('ALEStyleWarning',
                               \ s:f_none,           s:f_none,       s:f_none,   s:f_none,           s:f_none,           s:f_none,   s:f_none)
+call   SetC('ALEErrorSign',
+                              \ s:c_acc8,           s:f_none,       s:f_none,   s:c_acc8_cterm,     s:f_none,           s:f_none,   s:f_none)
+call   SetC('ALEWarningSign',
+                              \ s:c_acc9,           s:f_none,       s:f_none,   s:c_acc9_cterm,     s:f_none,           s:f_none,   s:f_none)
+call   SetC('ALEInfoSign',
+                              \ s:c_acc5,           s:f_none,       s:f_none,   s:c_acc5_cterm,     s:f_none,           s:f_none,   s:f_none)
+call   SetC('ALEVirtualTextError',
+                              \ s:c_dim2,           s:f_none,       s:f_none,   s:c_dim2_cterm,     s:f_none,           s:f_none,   s:f_none)
+call   SetC('ALEVirtualTextStyleError',
+                              \ s:c_dim2,           s:f_none,       s:f_none,   s:c_dim2_cterm,     s:f_none,           s:f_none,   s:f_none)
+call   SetC('ALEVirtualTextWarning',
+                              \ s:c_dim3,           s:f_none,       s:f_none,   s:c_dim3_cterm,     s:f_none,           s:f_none,   s:f_none)
+call   SetC('ALEVirtualTextStyleWarning',
+                              \ s:c_dim3,           s:f_none,       s:f_none,   s:c_dim3_cterm,     s:f_none,           s:f_none,   s:f_none)
+call   SetC('ALEVirtualTextInfo',
+                              \ s:c_dim4,           s:f_none,       s:f_none,   s:c_dim4_cterm,     s:f_none,           s:f_none,   s:f_none)
 
 
 " ------------------------------- Rust Syntax -------------------------------- "
