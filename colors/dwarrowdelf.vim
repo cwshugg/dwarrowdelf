@@ -209,6 +209,11 @@ call   SetC('StartifySpecial',  s:c_acc4,           s:f_none,       s:f_none,   
 call   SetC('StartifyVar',      s:c_acc6,           s:f_none,       s:f_none,   s:c_acc6_cterm,     s:f_none,           s:f_none,   s:f_none)
 
 
+" ------------------------ vim-signature Highlighting ------------------------ "
+call  SetC('SignatureMarkText', s:c_acc5,           s:c_gray2,      s:f_b,      s:c_acc5_cterm,     s:c_gray2_cterm,    s:f_b,      s:f_b)
+call  SetC('SignatureMarkLine', s:f_none,           s:c_gray2,      s:f_none,   s:f_none,           s:c_gray2_cterm,    s:f_none,   s:f_none)
+
+
 " ----------------------------- ALE Highlighting ----------------------------- "
 call   SetC('ALESignColumnWithErrors',
                               \ s:c_acc8,           s:c_black,      s:f_none,   s:c_acc8_cterm,     s:c_black_cterm,    s:f_none,   s:f_none)
