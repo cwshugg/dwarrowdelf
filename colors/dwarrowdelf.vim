@@ -208,6 +208,19 @@ call   SetC('StartifySection',  s:c_acc8,           s:f_none,       s:f_none,   
 call   SetC('StartifySpecial',  s:c_acc4,           s:f_none,       s:f_none,   s:c_acc4_cterm,     s:f_none,           s:f_none,   s:f_none)
 call   SetC('StartifyVar',      s:c_acc6,           s:f_none,       s:f_none,   s:c_acc6_cterm,     s:f_none,           s:f_none,   s:f_none)
 
+" -------------------------- vim-mark Highlighting --------------------------- "
+" Custom highlight groups for highlighting/searching multiple keywords
+call   SetC('MarkWord1',        s:c_gray1,          s:c_acc4,       s:f_none,   s:c_gray1_cterm,    s:c_acc4_cterm,     s:f_none,   s:f_none)
+call   SetC('MarkWord2',        s:c_gray1,          s:c_acc3,       s:f_none,   s:c_gray1_cterm,    s:c_acc3_cterm,     s:f_none,   s:f_none)
+call   SetC('MarkWord3',        s:c_gray1,          s:c_acc8,       s:f_none,   s:c_gray1_cterm,    s:c_acc8_cterm,     s:f_none,   s:f_none)
+call   SetC('MarkWord4',        s:c_gray1,          s:c_acc1,       s:f_none,   s:c_gray1_cterm,    s:c_acc1_cterm,     s:f_none,   s:f_none)
+call   SetC('MarkWord5',        s:c_gray1,          s:c_acc9,       s:f_none,   s:c_gray1_cterm,    s:c_acc9_cterm,     s:f_none,   s:f_none)
+call   SetC('MarkWord6',        s:c_gray1,          s:c_acc6,       s:f_none,   s:c_gray1_cterm,    s:c_acc6_cterm,     s:f_none,   s:f_none)
+call   SetC('MarkWord7',        s:c_gray1,          s:c_acc11,      s:f_none,   s:c_gray1_cterm,    s:c_acc11_cterm,    s:f_none,   s:f_none)
+call   SetC('MarkWord8',        s:c_gray1,          s:c_acc2,       s:f_none,   s:c_gray1_cterm,    s:c_acc2_cterm,     s:f_none,   s:f_none)
+call   SetC('MarkWord9',        s:c_gray1,          s:c_acc12,      s:f_none,   s:c_gray1_cterm,    s:c_acc12_cterm,    s:f_none,   s:f_none)
+call   SetC('MarkWord10',       s:c_gray1,          s:c_acc10,      s:f_none,   s:c_gray1_cterm,    s:c_acc10_cterm,    s:f_none,   s:f_none)
+
 
 " ------------------------ vim-signature Highlighting ------------------------ "
 call  SetC('SignatureMarkText', s:c_acc5,           s:c_gray2,      s:f_b,      s:c_acc5_cterm,     s:c_gray2_cterm,    s:f_b,      s:f_b)
