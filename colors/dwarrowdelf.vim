@@ -139,6 +139,9 @@ call   SetC('Character',        s:c_acc3,           s:f_none,       s:f_none,   
 call   SetC('Number',           s:c_acc8,           s:f_none,       s:f_none,   s:c_acc8_cterm,     s:f_none,           s:f_none,   s:f_none)
 call   SetC('Float',            s:c_acc8,           s:f_none,       s:f_none,   s:c_acc8_cterm,     s:f_none,           s:f_none,   s:f_none)
 
+" Special keys (like tabs ('\t'))
+call   SetC('SpecialKey',       s:c_dim3,           s:c_gray1,      s:f_none,   s:c_dim3_cterm,     s:c_gray1_cterm,     s:f_none,   s:f_none)
+
 " Identifiers and Functions
 call   SetC('Identifier',       s:c_acc2,           s:f_none,       s:f_b,      s:c_acc2_cterm,     s:f_none,           s:f_b,      s:f_b)
 call   SetC('Function',         s:c_acc4,           s:f_none,       s:f_b,      s:c_acc4_cterm,     s:f_none,           s:f_b,      s:f_b)
