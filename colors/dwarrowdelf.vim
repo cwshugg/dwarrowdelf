@@ -102,6 +102,8 @@ let s:c_acc11 = '#5F8787'       " MOSSY GREEN: moss around the watcher's lake
 let s:c_acc11_cterm = '66'
 let s:c_acc12 = '#AF00D7'       " BRIGHT PURPLE: shining crystal lamps
 let s:c_acc12_cterm = '128'
+let s:c_acc13 = '#AF5F00'       " DARK GOLD/ORANGE: Burning embers in the forge
+let s:c_acc13_cterm = '130'
 
 " Dwarrowdelf dim colors
 let s:c_dim1 = '#005f00'        " DARK GREEN
@@ -140,7 +142,7 @@ call   SetC('Number',           s:c_acc8,           s:f_none,       s:f_none,   
 call   SetC('Float',            s:c_acc8,           s:f_none,       s:f_none,   s:c_acc8_cterm,     s:f_none,           s:f_none,   s:f_none)
 
 " Special keys (like tabs ('\t'))
-call   SetC('SpecialKey',       s:c_acc8,           s:c_gray1,      s:f_none,   s:c_acc8_cterm,     s:c_gray1_cterm,     s:f_none,   s:f_none)
+call   SetC('SpecialKey',       s:c_acc13,          s:c_gray1,      s:f_none,   s:c_acc13_cterm,    s:c_gray1_cterm,     s:f_none,   s:f_none)
 
 " Identifiers and Functions
 call   SetC('Identifier',       s:c_acc2,           s:f_none,       s:f_b,      s:c_acc2_cterm,     s:f_none,           s:f_b,      s:f_b)
