@@ -316,36 +316,37 @@ call   SetC('rustModPathSep',
 "           GROUP NAME          GUIFG               GUIBG           GUI         CTERMFG             CTERMBG             CTERM       TERM
 " FIXME highlighting
 hi def dwd_dev_fixme guibg=black
-call matchadd('dwd_dev_fixme', 'FIXME', 10)
+call matchadd('dwd_dev_fixme', '\<FIXME\>', 20)
 call   SetC('dwd_dev_fixme',    s:c_acc8,           s:c_gray2,      s:f_b,      s:c_acc8_cterm,     s:c_gray2_cterm,    s:f_b,      s:f_b)
 
 " TODO highlighting
 call   SetC('Todo',             s:c_acc9,           s:c_gray2,      s:f_b,      s:c_acc9_cterm,     s:c_gray2_cterm,    s:f_b,      s:f_b)
 call   SetC('Todo2',            s:c_acc9,           s:c_gray2,      s:f_b,      s:c_acc9_cterm,     s:c_gray2_cterm,    s:f_b,      s:f_b)
-call matchadd('Todo2', 'TODO', 10)
+call matchadd('Todo2', '\<TODO\>', 20)
 
 " DEBUGGING highlighting
 hi def dwd_dev_debug2 guibg=black
-call matchadd('dwd_dev_debug2', 'DEBUGGING', 10)
+call matchadd('dwd_dev_debug2', '\<DEBUGGING\>', 20)
 call   SetC('dwd_dev_debug2',   s:c_acc10,          s:c_gray2,      s:f_b,      s:c_acc10_cterm,    s:c_gray2_cterm,    s:f_b,      s:f_b)
 
 " DEBUG highlighting
 hi def dwd_dev_debug guibg=black
-call matchadd('dwd_dev_debug', 'DEBUG', 9)
+call matchadd('dwd_dev_debug', '\<DEBUG\>', 20)
 call   SetC('dwd_dev_debug',    s:c_acc10,          s:c_gray2,      s:f_b,      s:c_acc10_cterm,    s:c_gray2_cterm,    s:f_b,      s:f_b)
 
 " BUG highlighting
 hi def dwd_dev_bug guibg=black
-call matchadd('dwd_dev_bug', 'BUG', 8)
+call matchadd('dwd_dev_bug', '\<BUG\>', 20)
 call   SetC('dwd_dev_bug' ,    s:c_acc12,           s:c_gray2,      s:f_b,      s:c_acc12_cterm,    s:c_gray2_cterm,    s:f_b,      s:f_b)
 
 " NOTE highlighting
 hi def dwd_dev_note guibg=black
-call matchadd('dwd_dev_note', 'NOTE', 10)
+call matchadd('dwd_dev_note', '\<NOTE\>', 10)
 call   SetC('dwd_dev_note' ,    s:c_acc11,          s:c_gray2,      s:f_b,      s:c_acc11_cterm,    s:c_gray2_cterm,    s:f_b,      s:f_b)
 
-" GOOD highlighting
-hi def dwd_dev_good guibg=black
-call matchadd('dwd_dev_good', 'GOOD', 10)
-call   SetC('dwd_dev_good' ,    s:c_acc4,           s:c_gray2,      s:f_b,      s:c_acc4_cterm,     s:c_gray2_cterm,    s:f_b,      s:f_b)
+" Git merge conflict indicators
+hi def dwd_git_merge_conflict_indicator guibg=black
+call matchadd('dwd_git_merge_conflict_indicator', '^\(<<<<<<<\s\+\S\+\|=======\|>>>>>>>\s\+\S\+\)$', 30)
+call   SetC('dwd_git_merge_conflict_indicator' ,
+                              \ s:c_black,          s:c_acc10,      s:f_b,      s:c_black_cterm,    s:c_acc10_cterm,    s:f_b,      s:f_b)
 
