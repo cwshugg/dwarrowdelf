@@ -114,6 +114,8 @@ let s:c_dim3 = '#5f5f00'        " DARK YELLOW
 let s:c_dim3_cterm = '58'
 let s:c_dim4 = '#005f87'        " DARK BLUE
 let s:c_dim4_cterm = '24'
+let s:c_dim5 = '#5F5FAF'        " DARK PURPLE
+let s:c_dim5_cterm = '61'
 
 " Dwarrowdelf light colors
 let s:c_ltred1 = '#DFAFAF'      " LIGHT RED
@@ -237,6 +239,10 @@ call   SetC('MarkWord10',       s:c_gray1,          s:c_acc10,      s:f_none,   
 " ------------------------ vim-signature Highlighting ------------------------ "
 call  SetC('SignatureMarkText', s:c_acc5,           s:c_gray2,      s:f_b,      s:c_acc5_cterm,     s:c_gray2_cterm,    s:f_b,      s:f_b)
 call  SetC('SignatureMarkLine', s:f_none,           s:c_gray2,      s:f_none,   s:f_none,           s:c_gray2_cterm,    s:f_none,   s:f_none)
+
+
+" --------------------------- Copilot Highlighting --------------------------- "
+call  SetC('CopilotSuggestion', s:c_dim5,           s:c_gray3,      s:f_b,      s:c_dim5_cterm,     s:c_gray3_cterm,    s:f_b,      s:f_b)
 
 
 " ----------------------------- ALE Highlighting ----------------------------- "
