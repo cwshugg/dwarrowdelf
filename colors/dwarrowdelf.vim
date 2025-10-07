@@ -118,8 +118,14 @@ let s:c_dim5 = '#5F5FAF'        " DARK PURPLE
 let s:c_dim5_cterm = '61'
 
 " Dwarrowdelf light colors
-let s:c_ltred1 = '#DFAFAF'      " LIGHT RED
-let s:c_ltred1_cterm = '181'
+let s:c_light1 = '#DFAFAF'      " LIGHT RED
+let s:c_light1_cterm = '181'
+let s:c_light2 = '#DFDFFF'     " LIGHT BLUE
+let s:c_light2_cterm = '189'
+let s:c_light3 = '#DFFFAF'    " LIGHT GREEN
+let s:c_light3_cterm = '193'
+let s:c_light4 = '#DFAFFF'   " LIGHT PURPLE
+let s:c_light4_cterm = '183'
 
 " Formatting strings
 let s:f_b = 'bold'              " bold formatting
@@ -202,7 +208,10 @@ call   SetC('TabLineSel',       s:c_acc3,           s:c_gray4,      s:f_none,   
 call   SetC('TabLineFill',      s:f_none,           s:c_black,      s:f_none,   s:f_none,           s:c_black_cterm,    s:f_none,   s:f_none)
 
 " Spell-check
-call   SetC('SpellBad',         s:c_ltred1,         s:f_none,       s:f_none,   s:c_ltred1_cterm,   s:f_none,           s:f_none,   s:f_none)
+call   SetC('SpellBad',         s:c_light1,         s:f_none,       s:f_u,      s:c_light1_cterm,   s:f_none,           s:f_u,      s:f_u)
+call   SetC('SpellLocal',       s:c_light2,         s:f_none,       s:f_u,      s:c_light2_cterm,   s:f_none,           s:f_u,      s:f_u)
+call   SetC('SpellCap',         s:c_light3,         s:f_none,       s:f_u,      s:c_light3_cterm,   s:f_none,           s:f_u,      s:f_u)
+call   SetC('SpellRare',        s:c_light4,         s:f_none,       s:f_u,      s:c_light4_cterm,   s:f_none,           s:f_u,      s:f_u)
 
 " VimDiff highlighting
 call   SetC('DiffAdd',          s:f_none,           s:c_dim1,       s:f_none,   s:f_none,           s:c_dim1_cterm,     s:f_none,   s:f_none)
