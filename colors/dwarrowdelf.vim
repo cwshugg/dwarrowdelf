@@ -115,6 +115,10 @@ let s:c_dim3_cterm = '58'
 let s:c_dim4 = '#005f87'        " DARK BLUE
 let s:c_dim4_cterm = '24'
 
+" Dwarrowdelf light colors
+let s:c_ltred1 = '#DFAFAF'      " LIGHT RED
+let s:c_ltred1_cterm = '181'
+
 " Formatting strings
 let s:f_b = 'bold'              " bold formatting
 let s:f_u = 'underline'         " underline formatting
@@ -130,7 +134,7 @@ call   SetC('Normal',           s:c_white,          s:c_black,      s:f_none,   
 call   SetC('CursorLine',       s:f_none,           s:c_gray1,      s:f_none,   s:f_none,           s:c_gray1_cterm,    s:f_none,   s:f_none)
 call   SetC('CursorColumn',     s:f_none,           s:c_gray1,      s:f_none,   s:f_none,           s:c_gray1_cterm,    s:f_none,   s:f_none)
 call   SetC('LineNr',           s:c_ltgray2,        s:f_none,       s:f_none,   s:c_ltgray2_cterm,  s:f_none,           s:f_none,   s:f_none)
-call   SetC('CursorLineNr',     s:c_acc10,          s:c_gray1,      s:f_b,      s:c_acc10_cterm,    s:c_gray1_cterm,    s:f_b,      s:f_b) 
+call   SetC('CursorLineNr',     s:c_acc10,          s:c_gray1,      s:f_b,      s:c_acc10_cterm,    s:c_gray1_cterm,    s:f_b,      s:f_b)
 call   SetC('ColorColumn',      s:f_none,           s:c_gray2,      s:f_none,   s:f_none,           s:c_gray2_cterm,    s:f_none,   s:f_none)
 call   SetC('EndOfBuffer',      s:c_black,          s:c_black,      s:f_none,   s:c_black_cterm,    s:c_black_cterm,    s:f_none,   s:f_none)
 
@@ -194,6 +198,9 @@ call   SetC('VertSplit',        s:c_gray4,          s:c_gray4,      s:f_none,   
 call   SetC('TabLine',          s:c_white,          s:c_gray2,      s:f_none,   s:c_white_cterm,    s:c_gray2_cterm,    s:f_none,   s:f_none)
 call   SetC('TabLineSel',       s:c_acc3,           s:c_gray4,      s:f_none,   s:c_acc3_cterm,     s:c_gray4_cterm,    s:f_none,   s:f_none)
 call   SetC('TabLineFill',      s:f_none,           s:c_black,      s:f_none,   s:f_none,           s:c_black_cterm,    s:f_none,   s:f_none)
+
+" Spell-check
+call   SetC('SpellBad',         s:c_ltred1,         s:f_none,       s:f_none,   s:c_ltred1_cterm,   s:f_none,           s:f_none,   s:f_none)
 
 " VimDiff highlighting
 call   SetC('DiffAdd',          s:f_none,           s:c_dim1,       s:f_none,   s:f_none,           s:c_dim1_cterm,     s:f_none,   s:f_none)
