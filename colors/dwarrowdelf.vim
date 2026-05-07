@@ -117,6 +117,14 @@ let s:c_dim4_cterm = '24'
 let s:c_dim5 = '#5F5FAF'        " DARK PURPLE
 let s:c_dim5_cterm = '61'
 
+" Dwarrowdelf diff colors (soft backgrounds)
+let s:c_diff_add = '#005f00'        " SOFT GREEN
+let s:c_diff_add_cterm = '22'
+let s:c_diff_delete = '#5f0000'     " SOFT RED
+let s:c_diff_delete_cterm = '52'
+let s:c_diff_change = '#5f5f00'     " SOFT YELLOW
+let s:c_diff_change_cterm = '58'
+
 " Dwarrowdelf light colors
 let s:c_light1 = '#DFAFAF'      " LIGHT RED
 let s:c_light1_cterm = '181'
@@ -214,10 +222,10 @@ call   SetC('SpellCap',         s:c_light3,         s:f_none,       s:f_u,      
 call   SetC('SpellRare',        s:c_light4,         s:f_none,       s:f_u,      s:c_light4_cterm,   s:f_none,           s:f_u,      s:f_u)
 
 " VimDiff highlighting
-call   SetC('DiffAdd',          s:f_none,           s:c_dim1,       s:f_none,   s:f_none,           s:c_dim1_cterm,     s:f_none,   s:f_none)
-call   SetC('DiffDelete',       s:f_none,           s:c_dim2,       s:f_none,   s:f_none,           s:c_dim2_cterm,     s:f_none,   s:f_none)
-call   SetC('DiffChange',       s:f_none,           s:c_dim3,       s:f_none,   s:f_none,           s:c_dim3_cterm,     s:f_none,   s:f_none)
-call   SetC('DiffText',         s:f_none,           s:c_dim3,       s:f_none,   s:f_none,           s:c_dim3_cterm,     s:f_none,   s:f_none)
+call   SetC('DiffAdd',          s:f_none,           s:c_diff_add,       s:f_none,   s:f_none,           s:c_diff_add_cterm,     s:f_none,   s:f_none)
+call   SetC('DiffDelete',       s:f_none,           s:c_diff_delete,    s:f_none,   s:f_none,           s:c_diff_delete_cterm,  s:f_none,   s:f_none)
+call   SetC('DiffChange',       s:f_none,           s:c_diff_change,    s:f_none,   s:f_none,           s:c_diff_change_cterm,  s:f_none,   s:f_none)
+call   SetC('DiffText',         s:f_none,           s:c_diff_change,    s:f_none,   s:f_none,           s:c_diff_change_cterm,  s:f_none,   s:f_none)
 
 " Startify highlighting
 call   SetC('StartifyBracket',  s:c_ltgray1,        s:f_none,       s:f_none,   s:c_ltgray1_cterm,  s:f_none,           s:f_none,   s:f_none)
