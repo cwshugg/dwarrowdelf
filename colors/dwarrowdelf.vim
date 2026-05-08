@@ -118,21 +118,23 @@ let s:c_dim5 = '#5F5FAF'        " DARK PURPLE
 let s:c_dim5_cterm = '61'
 
 " Dwarrowdelf diff colors (soft backgrounds)
-let s:c_diff_add = '#005f00'        " SOFT GREEN
+let s:c_diff_add = '#005f00'    " SOFT GREEN
 let s:c_diff_add_cterm = '22'
-let s:c_diff_delete = '#5f0000'     " SOFT RED
+let s:c_diff_delete = '#5f0000' " SOFT RED
 let s:c_diff_delete_cterm = '52'
-let s:c_diff_change = '#5f5f00'     " SOFT YELLOW
+let s:c_diff_change = '#5f5f00' " SOFT YELLOW
 let s:c_diff_change_cterm = '58'
+let s:c_confict = '#5f005f'     " PURPLE (for git conflict markers)
+let s:c_confict_cterm = '53'
 
 " Dwarrowdelf light colors
 let s:c_light1 = '#DFAFAF'      " LIGHT RED
 let s:c_light1_cterm = '181'
-let s:c_light2 = '#DFDFFF'     " LIGHT BLUE
+let s:c_light2 = '#DFDFFF'      " LIGHT BLUE
 let s:c_light2_cterm = '189'
-let s:c_light3 = '#DFFFAF'    " LIGHT GREEN
+let s:c_light3 = '#DFFFAF'      " LIGHT GREEN
 let s:c_light3_cterm = '193'
-let s:c_light4 = '#DFAFFF'   " LIGHT PURPLE
+let s:c_light4 = '#DFAFFF'      " LIGHT PURPLE
 let s:c_light4_cterm = '183'
 
 " Formatting strings
@@ -226,6 +228,11 @@ call   SetC('DiffAdd',          s:f_none,           s:c_diff_add,       s:f_none
 call   SetC('DiffDelete',       s:f_none,           s:c_diff_delete,    s:f_none,   s:f_none,           s:c_diff_delete_cterm,  s:f_none,   s:f_none)
 call   SetC('DiffChange',       s:f_none,           s:c_diff_change,    s:f_none,   s:f_none,           s:c_diff_change_cterm,  s:f_none,   s:f_none)
 call   SetC('DiffText',         s:f_none,           s:c_diff_change,    s:f_none,   s:f_none,           s:c_diff_change_cterm,  s:f_none,   s:f_none)
+
+" merg.vim (merge conflict/git diff plugin) highlighting
+call   SetC('MergConflictMarker',
+                              \ s:c_acc3,           s:c_confict,        s:f_b,      s:c_acc3_cterm,     s:c_confict_cterm,      s:f_b,      s:f_b)
+"call   SetC('ErrorMsg',         s:c_acc8,           s:f_none,       s:f_b,      s:c_acc8_cterm,     s:f_none,           s:f_b,      s:f_b)
 
 " Startify highlighting
 call   SetC('StartifyBracket',  s:c_ltgray1,        s:f_none,       s:f_none,   s:c_ltgray1_cterm,  s:f_none,           s:f_none,   s:f_none)
@@ -363,7 +370,7 @@ call   SetC('dwd_dev_note' ,    s:c_acc11,          s:c_gray2,      s:f_b,      
 
 " Git merge conflict indicators
 hi def dwd_git_merge_conflict_indicator guibg=black
-call matchadd('dwd_git_merge_conflict_indicator', '^\(<<<<<<<\s\+\S\+\|=======\|>>>>>>>\s\+\S\+\)$', 30)
+call matchadd('dwd_git_merge_conflict_indicator', '^\(<<<<<<<\|||||||\|=======\|>>>>>>>\)', 30)
 call   SetC('dwd_git_merge_conflict_indicator' ,
-                              \ s:c_black,          s:c_acc10,      s:f_b,      s:c_black_cterm,    s:c_acc10_cterm,    s:f_b,      s:f_b)
+                              \ s:c_black,          s:c_confict,    s:f_b,      s:c_black_cterm,    s:c_confict_cterm,  s:f_b,      s:f_b)
 
